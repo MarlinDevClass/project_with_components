@@ -90,8 +90,6 @@ use Faker\Provider\en_US\Address;
             if (!$this->auth->isLoggedIn()){
                 Header::redirect("/login");
             }
-            echo $this->auth->getUserId().'<br>';
-            echo $this->auth->getEmail();
             $success = Flash::get('success');
             $users1 = $this->queryBuilder->selectAll('users');
             $temp = $this->queryBuilder->selectAll('users_information');
