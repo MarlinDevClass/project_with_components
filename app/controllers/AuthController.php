@@ -99,18 +99,6 @@
             Header::redirect("/login");
         }
 
-        public function test(){
-            try {
-                $this->auth->admin()->logInAsUserById(15);
-            }
-            catch (\Delight\Auth\UnknownIdException $e) {
-                die('Unknown ID');
-            }
-            catch (\Delight\Auth\EmailNotVerifiedException $e) {
-                die('Email address not verified');
-            }
-            Header::redirect("/");
-        }
     }
 
 ?>

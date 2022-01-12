@@ -113,16 +113,5 @@ use Faker\Provider\en_US\Address;
             $error = Flash::get('error');
             return $this->templates->render('login', ['success' => $success, 'error' => $error]);
         }
-        
-        public function faker(){
-            echo Address::address; die;
-            for($i = 2; $i <= 5; $i++){
-                $this->queryBuilder->update('users_information', ['phone' => ''], [['user_id = :user_id'], ['user_id' => $i]]);
-                $this->queryBuilder->update('users_information', ['' => ''], [['user_id = :user_id'], ['user_id' => $i]]);
-                $this->queryBuilder->update('users_information', ['' => ''], [['user_id = :user_id'], ['user_id' => $i]]);
-                $this->queryBuilder->update('users_information', ['' => ''], [['user_id = :user_id'], ['user_id' => $i]]);
-                $this->queryBuilder->update('users_information', ['' => ''], [['user_id = :user_id'], ['user_id' => $i]]);
-            }
-        }
     }
 ?>
